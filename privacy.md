@@ -6,11 +6,11 @@ lang: en
 
 # PlatinoHunter Privacy Policy
 
-**Last updated:** October 8, 2026 · [Leer en español](../privacidad/)
+**Last updated:** October 9, 2026 · [Leer en español](../privacidad/)
 
 PlatinoHunter is an Android app that helps you track your PlayStation Network trophies, find guides and discover what to platinum next. This policy explains what data the app uses, why, where it is stored and who it is shared with.
 
-**In short:** the app has no servers of its own. Your data is stored only on your phone, and we don't sell or collect it. The app only connects to the third-party services it needs to work (Sony, the Steam store and guide websites).
+**In short:** the app has no servers of its own. Your data is stored only on your phone, and we don't sell or collect it. The app only connects to the third-party services it needs to work (Sony, the Steam store and guide websites), and to Google AdMob to show **at most one ad per day** (see section 5).
 
 > PlatinoHunter is an independent app. **It is not affiliated with, sponsored or endorsed by Sony Interactive Entertainment.** "PlayStation", "PSN" and game names and images belong to their respective owners.
 
@@ -45,12 +45,16 @@ The reviews you write (rating, "like" and text) are stored **only on your phone*
 
 ### 2.4 What the app does not collect
 
-- No analytics or tracking tools.
+- No analytics tools of its own. The only exception is Google AdMob advertising, explained in section 5.
 - No third-party crash reporting.
 - No access to your location, contacts, camera or microphone.
 - No storage permissions: images are saved to your gallery through Android's system (MediaStore), without extra permissions.
 
-**Android permissions:** only `INTERNET` and `ACCESS_NETWORK_STATE`, to connect to the services described here and to know whether you are online.
+**Android permissions:**
+
+- `INTERNET` and `ACCESS_NETWORK_STATE`: to connect to the services described here and to know whether you are online.
+- `WAKE_LOCK` and `FOREGROUND_SERVICE`: added by Android's task scheduler (WorkManager) for the daily background update.
+- `AD_ID` and the *Privacy Sandbox* permissions (`ACCESS_ADSERVICES_*`): added by Google AdMob for ads (see section 5).
 
 ## 3. Where data is stored
 
@@ -58,6 +62,7 @@ Everything is stored **on your phone**:
 
 - **PSN session token:** encrypted with a key from Android's secure storage (Android Keystore).
 - **Everything else** (your library, trophies, reviews, game data, guide index and friends' data): in a local database inside the app.
+- **Ads:** the app stores the day you last saw an ad, so it never shows you more than one per day. Your consent choice is stored on your phone by Google's consent tool.
 - **Backups:** Android automatic backup is disabled for the app, so this data is not uploaded to your Google account.
 
 ## 4. Third-party services the app connects to
@@ -71,16 +76,15 @@ The app connects directly to these services, always over HTTPS. Each has its own
 | **PlayStationTrophies.org** | Downloading its public guide index (once a week) | An anonymous request |
 | **PSNProfiles, PlayStationTrophies.org** | Opening guides, only when you choose to | Opened in Chrome; what you do there is governed by those sites and by Google |
 | **Image servers** of Sony and Steam | Loading covers, icons and avatars | Image requests |
+| **Google AdMob** | Showing at most one ad per day and asking for your consent | The device data described in section 5; **never** your PSN data |
 
-Privacy policies: [Sony](https://www.playstation.com/legal/privacy-policy/) · [Valve/Steam](https://store.steampowered.com/privacy_agreement/) · [Google/Chrome](https://policies.google.com/privacy).
+Privacy policies: [Sony](https://www.playstation.com/legal/privacy-policy/) · [Valve/Steam](https://store.steampowered.com/privacy_agreement/) · [Google (Chrome and AdMob)](https://policies.google.com/privacy).
 
 ## 5. Advertising
 
-<!-- Keep this section only if the published version shows ads. -->
+The app shows **at most one ad per day**, served by **Google AdMob**. It is a full-screen ad (it may be a video) that appears when you switch sections, never when you open the app, and you can close it. Google may collect and use device data, such as the advertising ID, IP address, and technical and ad-interaction data, to show and measure ads and to prevent fraud. It does so under its own policy: [how Google uses data](https://policies.google.com/technologies/partner-sites).
 
-The app may show **at most one ad per day**, served by **Google AdMob**. Google may collect and use device data, such as the advertising ID, IP address, and technical and ad-interaction data, to show and measure ads and to prevent fraud. It does so under its own policy: [how Google uses data](https://policies.google.com/technologies/partner-sites).
-
-- In the **European Economic Area, the UK and Switzerland** (and wherever the law requires it), the app asks for your **consent** before showing personalized ads. You can change your choice at any time in the app's settings.
+- In the **European Economic Area, the UK and Switzerland** (and wherever the law requires it), the app asks for your **consent** before showing personalized ads. You can change your choice at any time in *Settings → Ad privacy options*.
 - You can reset or turn off your advertising ID in *Android Settings → Google → Ads*.
 - PlatinoHunter **does not share** your trophies, reviews or any PSN account data **with AdMob**.
 
