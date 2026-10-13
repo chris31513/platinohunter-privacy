@@ -6,11 +6,11 @@ lang: en
 
 # PlatinoHunter Privacy Policy
 
-**Last updated:** October 9, 2026 · [Leer en español](../privacidad/)
+**Last updated:** October 13, 2026 · [Leer en español](../privacidad/)
 
 PlatinoHunter is an Android app that helps you track your PlayStation Network trophies, find guides and discover what to platinum next. This policy explains what data the app uses, why, where it is stored and who it is shared with.
 
-**In short:** the app has no servers of its own. Your data is stored only on your phone, and we don't sell or collect it. The app only connects to the third-party services it needs to work (Sony, the Steam store and guide websites), and to Google AdMob to show **at most one ad per day** (see section 5).
+**In short:** the app has no servers of its own. Your data is stored only on your phone, and we don't sell or collect it. The app only connects to the third-party services it needs to work (Sony, the Steam store and guide websites), to Google AdMob to show **at most one ad per day** (see section 5), and to Firebase Crashlytics to receive a report when the app closes because of an error (see section 2.4).
 
 > PlatinoHunter is an independent app. **It is not affiliated with, sponsored or endorsed by Sony Interactive Entertainment.** "PlayStation", "PSN" and game names and images belong to their respective owners.
 
@@ -46,7 +46,7 @@ The reviews you write (rating, "like" and text) are stored **only on your phone*
 ### 2.4 What the app does not collect
 
 - No analytics tools of its own. The only exception is Google AdMob advertising, explained in section 5.
-- No third-party crash reporting.
+- No usage analytics. To detect bugs it uses **Firebase Crashlytics** (by Google): if the app closes because of an error, it sends a technical report with the error, device model, Android and app version, and a random installation identifier. It **does not include** your PSN username, trophies or reviews. Reports are kept for 90 days and are only used to fix bugs.
 - No access to your location, contacts, camera or microphone.
 - No storage permissions: images are saved to your gallery through Android's system (MediaStore), without extra permissions.
 
@@ -77,8 +77,9 @@ The app connects directly to these services, always over HTTPS. Each has its own
 | **PSNProfiles, PlayStationTrophies.org** | Opening guides, only when you choose to | Opened in Chrome; what you do there is governed by those sites and by Google |
 | **Image servers** of Sony and Steam | Loading covers, icons and avatars | Image requests |
 | **Google AdMob** | Showing at most one ad per day and asking for your consent | The device data described in section 5; **never** your PSN data |
+| **Firebase Crashlytics (Google)** | Crash reports | The technical crash data described in section 2.4; **never** your PSN data |
 
-Privacy policies: [Sony](https://www.playstation.com/legal/privacy-policy/) · [Valve/Steam](https://store.steampowered.com/privacy_agreement/) · [Google (Chrome and AdMob)](https://policies.google.com/privacy).
+Privacy policies: [Sony](https://www.playstation.com/legal/privacy-policy/) · [Valve/Steam](https://store.steampowered.com/privacy_agreement/) · [Google (Chrome, AdMob and Firebase)](https://policies.google.com/privacy) · [Firebase](https://firebase.google.com/support/privacy).
 
 ## 5. Advertising
 

@@ -6,11 +6,11 @@ lang: es
 
 # Aviso de privacidad de PlatinoHunter
 
-**Última actualización:** 9 de octubre de 2026 · [Read in English](../privacy/)
+**Última actualización:** 13 de octubre de 2026 · [Read in English](../privacy/)
 
 PlatinoHunter es una aplicación para Android que te ayuda a seguir tus trofeos de PlayStation Network, encontrar guías y descubrir qué platinar después. Este aviso explica qué datos usa la app, para qué, dónde se guardan y con quién se comparten.
 
-**En resumen:** la app no tiene servidores propios. Tus datos se guardan solo en tu teléfono y no los vendemos ni los recopilamos. La app solo se conecta a los servicios de terceros que necesita para funcionar (Sony, la tienda de Steam y webs de guías) y a Google AdMob para mostrar **como mucho un anuncio al día** (ver la sección 5).
+**En resumen:** la app no tiene servidores propios. Tus datos se guardan solo en tu teléfono y no los vendemos ni los recopilamos. La app solo se conecta a los servicios de terceros que necesita para funcionar (Sony, la tienda de Steam y webs de guías) a Google AdMob para mostrar **como mucho un anuncio al día** (ver la sección 5) y a Firebase Crashlytics para recibir informes cuando la app se cierra por un error (ver la sección 2.4).
 
 > PlatinoHunter es una app independiente. **No está afiliada, patrocinada ni aprobada por Sony Interactive Entertainment.** «PlayStation», «PSN» y los nombres e imágenes de los juegos pertenecen a sus respectivos propietarios.
 
@@ -46,7 +46,7 @@ Las reseñas que escribes (nota, «me gusta» y texto) se guardan **solo en tu t
 ### 2.4 Lo que la app no recopila
 
 - No usa herramientas de analítica propias. La única excepción es la publicidad de Google AdMob, que se explica en la sección 5.
-- No usa sistemas de informes de errores de terceros.
+- No usa analítica de uso. Para detectar errores usa **Firebase Crashlytics** (de Google): si la app se cierra por un fallo, envía un informe técnico con el error, el modelo del dispositivo, la versión de Android y de la app, y un identificador de instalación aleatorio. **No incluye** tu usuario de PSN, tus trofeos ni tus reseñas. Los informes se conservan 90 días y solo sirven para corregir fallos.
 - No accede a tu ubicación, contactos, cámara ni micrófono.
 - No pide permisos de almacenamiento: las imágenes se guardan en tu galería con el sistema de Android (MediaStore), sin permisos adicionales.
 
@@ -77,8 +77,9 @@ La app se conecta directamente, siempre por HTTPS, a estos servicios. Cada uno t
 | **PSNProfiles, PlayStationTrophies.org** | Abrir guías, solo cuando tú lo eliges | Se abren en Chrome; lo que hagas allí se rige por esas webs y por Google |
 | **Servidores de imágenes** de Sony y Steam | Cargar portadas, iconos y avatares | Peticiones de las imágenes |
 | **Google AdMob** | Mostrar como mucho un anuncio al día y pedir tu consentimiento | Los datos del dispositivo descritos en la sección 5; **nunca** tus datos de PSN |
+| **Firebase Crashlytics (Google)** | Informes de fallos | Los datos técnicos del fallo descritos en la sección 2.4; **nunca** tus datos de PSN |
 
-Políticas de privacidad: [Sony](https://www.playstation.com/legal/privacy-policy/) · [Valve/Steam](https://store.steampowered.com/privacy_agreement/) · [Google (Chrome y AdMob)](https://policies.google.com/privacy).
+Políticas de privacidad: [Sony](https://www.playstation.com/legal/privacy-policy/) · [Valve/Steam](https://store.steampowered.com/privacy_agreement/) · [Google (Chrome, AdMob y Firebase)](https://policies.google.com/privacy) · [Firebase](https://firebase.google.com/support/privacy).
 
 ## 5. Publicidad
 
